@@ -4,6 +4,8 @@ import { EntriesProps } from "./EntriesProvider";
 type ActionEntries = 
 | {type:'add-Entry',payload: Entry}
 | {type:'update-Entry',payload: Entry}
+| {type:'refesh-Entry',payload: Entry[]}
+
 
 
 export const entriesReducer = (state:EntriesProps,action:ActionEntries) => {
@@ -24,6 +26,11 @@ export const entriesReducer = (state:EntriesProps,action:ActionEntries) => {
         return entry
       })
     }
+    case 'refesh-Entry':
+      return {
+        ...state,
+        entries:[...action.payload]
+      }
   
     default:
       return state
