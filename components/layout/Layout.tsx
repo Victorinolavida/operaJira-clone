@@ -18,7 +18,7 @@ export const Layout:FC<PropsWithChildren<Props>> = ({title='Open Jira',children}
         <Navbar />
         {/* sidebar */}
         <SideBar />
-      <Box sx={{ padding:'10px 20px' }}>
+      <Box sx={{ padding:'10px 20px',height:'calc(100vh - 100px)'}}>
           {children}
       </Box>
     </Box>

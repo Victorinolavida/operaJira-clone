@@ -4,7 +4,8 @@ import { Entry } from '../../interfaces';
 interface PropsContext {
   entries:Entry[],
   addEntry: (description:string) => void,
-  updateEntry:(entry:Entry) => void;
+  updateEntry:(entry:Entry,showSnackbar:boolean) => void;
+  deleteEntry:(entry:Entry)=>void;
 }
 
 

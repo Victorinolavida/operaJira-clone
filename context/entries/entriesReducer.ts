@@ -5,6 +5,8 @@ type ActionEntries =
 | {type:'add-Entry',payload: Entry}
 | {type:'update-Entry',payload: Entry}
 | {type:'refesh-Entry',payload: Entry[]}
+| {type:'delete-entry',payload: Entry}
+
 
 
 
@@ -30,6 +32,12 @@ export const entriesReducer = (state:EntriesProps,action:ActionEntries) => {
       return {
         ...state,
         entries:[...action.payload]
+      }
+    case 'delete-entry':
+      return{
+        ...state,
+        entries: state.entries.filter(entry => entry._id !== action.payload._id)
+
       }
   
     default:

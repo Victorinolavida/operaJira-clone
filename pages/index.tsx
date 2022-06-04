@@ -1,6 +1,5 @@
 import React from 'react'
-import { Card, CardContent, CardHeader, Grid, Typography } from '@mui/material'
-import { NextPage } from 'next'
+import { Card, CardHeader, Grid } from '@mui/material'
 import { Layout } from '../components/layout/Layout'
 import { EntryList, NewEntry } from '../components/ui'
 

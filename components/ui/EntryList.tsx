@@ -27,7 +27,7 @@ export const EntryList:React.FC<Props> = ({status}) => {
 
     const entry =entries.find(e => e._id === id)!;
     entry.status = status;
-    updateEntry(entry)
+    updateEntry(entry,false)
     endDragging()
   }
 

@@ -11,8 +11,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     case 'GET':
       return getEntries(res)
     case 'POST':
-      return postEntry(req,res)
-  
+      return postEntry(req,res);
+
     default:
       return res.status(400).json({ message: 'Enpoint no existe' });
   }
@@ -66,3 +66,5 @@ const postEntry = async(req: NextApiRequest, res: NextApiResponse<Data>)=>{
 
 
 }
+
+
